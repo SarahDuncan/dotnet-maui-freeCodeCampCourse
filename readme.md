@@ -12,6 +12,7 @@ I wrote this code by following along with the [freeCodeCamp.org .NET Maui tutori
 - event handling of a listview
 - parameters of URI-based navigation
 - work with stack layouts
+- using ObservableCollections to notify listviews of data changes
 - (will add to this list as I cover more of the course)
 
 last updated 22/05/2024

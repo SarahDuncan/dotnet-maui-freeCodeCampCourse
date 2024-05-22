@@ -31,7 +31,42 @@
         };
 
         public static List<Contact> GetContacts() => _contacts;
-        public static Contact GetContactById(int id) => _contacts.FirstOrDefault(c => c.Id == id);
 
+        public static Contact GetContactById(int id) 
+        {
+            var contact = _contacts.FirstOrDefault(c => c.Id == id);
+
+            if (contact != null)
+            {
+                return new Contact
+                {
+                    Id = contact.Id,
+                    Name = contact.Name,
+                    Email = contact.Email,
+                    PhoneNumber = contact.PhoneNumber,
+                    Address = contact.Address
+                };
+            }
+
+            return null;
+        } 
+
+        public static void UpdateContact(int id, Contact contact)
+        {
+            if (id != contact.Id)
+            {
+                return;
+            }
+
+            var contactToUpdate = _contacts.FirstOrDefault(c => c.Id == id);
+
+            if (contactToUpdate != null)
+            {
+                contactToUpdate.Name = contact.Name;
+                contactToUpdate.Email = contact.Email;
+                contactToUpdate.PhoneNumber = contact.PhoneNumber;
+                contactToUpdate.Address = contact.Address;
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
 using Contacts.Models;
+using System.Collections.ObjectModel;
 
 namespace Contacts.Views;
 
@@ -7,11 +8,16 @@ public partial class ContactsPage : ContentPage
 	public ContactsPage()
 	{
 		InitializeComponent();
+	}
 
-        var contacts = ContactRepository.GetContacts();
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        var contacts = new ObservableCollection<Models.Contact>(ContactRepository.GetContacts());
 
         listContacts.ItemsSource = contacts;
-	}
+    }
 
     private async void listContacts_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
