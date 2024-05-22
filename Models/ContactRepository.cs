@@ -6,21 +6,25 @@
         {
             new Contact
             {
+                Id = 1,
                 Name = "John Doe",
                 Email = "johndoe@email.com"
             },
             new Contact
             {
+                Id = 2,
                 Name = "Jane Doe",
                 Email = "janedoe@email.com"
             },
             new Contact
             {
+                Id = 3,
                 Name = "Tom Hanks",
                 Email = "tomhanks@email.com"
             },
             new Contact
             {
+                Id = 4,
                 Name = "Taylor Swift",
                 Email = "taylorswift@email.com"
             }

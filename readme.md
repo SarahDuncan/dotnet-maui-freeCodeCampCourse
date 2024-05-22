@@ -3,8 +3,8 @@
 I wrote this code by following along with the [freeCodeCamp.org .NET Maui tutorial](https://www.youtube.com/watch?v=n3tA3Ku65_8).
 
 ## Course Content
-- What .NET Maui is / history
-- creating the first project, setup
+- what .NET Maui is / history
+- creating the first project & setup
 - typical project structure
 - three elements of stateful .NET Maui (view -> events -> state -> repeat)
 - URI-based navigation/page routing
