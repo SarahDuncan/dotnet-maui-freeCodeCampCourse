@@ -1,15 +1,62 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Contacts.Views.EditContactPage"
-             Title="EditContact">
-    <VerticalStackLayout>
-        <Label 
+<ContentPage
+    x:Class="Contacts.Views.EditContactPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="EditContact">
+    <!--<StackLayout Orientation="Vertical">
+        <Label
             x:Name="lbl"
+            HorizontalOptions="Center"
             Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Button x:Name="btnCancel" Text="Cancel" Clicked="btnCancel_Clicked"/>
+            VerticalOptions="Center" />
+        <Button
+            x:Name="btnCancel"
+            Clicked="btnCancel_Clicked"
+            Text="Cancel" />
 
+    </StackLayout>-->
+
+    <VerticalStackLayout Margin="20,10,20,0" Spacing="10">
+
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout>
+                <Label
+                    Text="Name"
+                    VerticalOptions="Center"
+                    WidthRequest="60" />
+                <Entry VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout>
+                <Label
+                    Text="Email"
+                    VerticalOptions="Center"
+                    WidthRequest="60" />
+                <Entry VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout>
+                <Label
+                    Text="Phone number"
+                    VerticalOptions="Center"
+                    WidthRequest="60" />
+                <Entry VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout>
+                <Label
+                    Text="Name"
+                    VerticalOptions="Center"
+                    WidthRequest="60" />
+                <Entry VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Frame>
     </VerticalStackLayout>
 </ContentPage>

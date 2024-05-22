@@ -11,7 +11,7 @@ I wrote this code by following along with the [freeCodeCamp.org .NET Maui tutori
 - basics of listview and data binding
 - event handling of a listview
 - parameters of URI-based navigation
-- adding a stack layout to a view
+- work with stack layouts
 - (will add to this list as I cover more of the course)
 
 last updated 22/05/2024
