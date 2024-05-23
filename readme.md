@@ -16,6 +16,12 @@ I wrote this code by following along with the [freeCodeCamp.org .NET Maui tutori
 - add validation on input fields
 - add a reusable content control
 - add ContextActions menu items
-- (will add to this list as I cover more of the course)
+- adding a searchbar
 
-last updated 22/05/2024
+![App home page](Resources\Images\ContactsHomePage.png)
+![Search contacts page](Resources\Images\ContactsSearch.png)
+![Context menu page](Resources\Images\ContactContextMenu.png)
+![Edit contact page](Resources\Images\ContactEdit.png)
+![Validate edit/add contact page](Resources\Images\Validation.png)
+
+last updated 23/05/2024
