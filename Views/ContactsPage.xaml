@@ -6,6 +6,7 @@
     Title="Contacts">
     <Grid Padding="5">
         <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
             <RowDefinition Height="*" />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
@@ -13,9 +14,15 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
+        <SearchBar
+            x:Name="searchBar"
+            Grid.Row="0"
+            Placeholder="Search for a contact"
+            TextChanged="SearchBar_TextChanged" />
+
         <ListView
             x:Name="listContacts"
-            Grid.Row="0"
+            Grid.Row="1"
             BackgroundColor="Transparent"
             ItemSelected="listContacts_ItemSelected"
             ItemTapped="listContacts_ItemTapped"
@@ -38,7 +45,7 @@
 
         <Button
             x:Name="btnAdd"
-            Grid.Row="1"
+            Grid.Row="2"
             Clicked="btnAdd_Clicked"
             Text="Add Contact" />
     </Grid>

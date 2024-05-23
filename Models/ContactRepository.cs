@@ -32,7 +32,7 @@
 
         public static List<Contact> GetContacts() => _contacts;
 
-        public static Contact GetContactById(int id) 
+        public static Contact GetContactById(int id)
         {
             var contact = _contacts.FirstOrDefault(c => c.Id == id);
 
@@ -49,7 +49,7 @@
             }
 
             return null;
-        } 
+        }
 
         public static void UpdateContact(int id, Contact contact)
         {
@@ -85,6 +85,35 @@
             {
                 _contacts.Remove(contactToDelete);
             }
+        }
+
+        public static List<Contact>? SearchContacts(string input)
+        {
+            var contacts = _contacts.Where(c => !string.IsNullOrWhiteSpace(c.Name) 
+            && c.Name.StartsWith(input, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            if (contacts == null || contacts.Count == 0)
+            {
+                contacts = _contacts.Where(c => !string.IsNullOrWhiteSpace(c.Email) &&
+                c.Email.StartsWith(input, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+            else return contacts;
+
+            if (contacts == null || contacts.Count == 0)
+            {
+                contacts = _contacts.Where(c => !string.IsNullOrWhiteSpace(c.PhoneNumber)  &&
+                c.PhoneNumber.StartsWith(input, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+            else return contacts;
+
+            if (contacts == null || contacts.Count == 0)
+            {
+                contacts = _contacts.Where(c => !string.IsNullOrWhiteSpace(c.Address)  &&
+                c.Address.StartsWith(input, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+            else return contacts;
+
+            return contacts;
         }
     }
 }

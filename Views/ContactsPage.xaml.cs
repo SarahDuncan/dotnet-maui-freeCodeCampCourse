@@ -13,10 +13,8 @@ public partial class ContactsPage : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
-
-        var contacts = new ObservableCollection<Models.Contact>(ContactRepository.GetContacts());
-
-        listContacts.ItemsSource = contacts;
+        searchBar.Text = string.Empty;
+        LoadContacts();
     }
 
     private async void listContacts_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -51,6 +49,12 @@ public partial class ContactsPage : ContentPage
     private void LoadContacts()
     {
         var contacts = new ObservableCollection<Models.Contact>(ContactRepository.GetContacts());
+        listContacts.ItemsSource = contacts;
+    }
+
+    private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        var contacts = new ObservableCollection<Models.Contact>(ContactRepository.SearchContacts(((SearchBar)sender).Text));
         listContacts.ItemsSource = contacts;
     }
 }
