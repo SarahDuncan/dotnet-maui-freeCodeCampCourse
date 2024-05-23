@@ -3,6 +3,7 @@
     x:Class="Contacts.Views.EditContactPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="EditContact">
     <VerticalStackLayout Margin="20,10,20,0" Spacing="10">
 
@@ -12,7 +13,14 @@
                     Text="Name"
                     VerticalOptions="Center"
                     WidthRequest="60" />
-                <Entry x:Name="entryName" VerticalOptions="Center" />
+                <Entry x:Name="entryName" VerticalOptions="Center">
+                    <Entry.Behaviors>
+                        <toolkit:TextValidationBehavior
+                            x:Name="nameValidator"
+                            Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                            MinimumLength="1" />
+                    </Entry.Behaviors>
+                </Entry>
             </HorizontalStackLayout>
         </Frame>
 
@@ -22,7 +30,17 @@
                     Text="Email"
                     VerticalOptions="Center"
                     WidthRequest="60" />
-                <Entry x:Name="entryEmail" VerticalOptions="Center" />
+                <Entry x:Name="entryEmail" VerticalOptions="Center">
+                    <Entry.Behaviors>
+                        <toolkit:MultiValidationBehavior x:Name="emailValidator" Flags="ValidateOnAttaching,ValidateOnValueChanged">
+                            <toolkit:TextValidationBehavior
+                                toolkit:MultiValidationBehavior.Error="Email is required"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1" />
+                            <toolkit:EmailValidationBehavior toolkit:MultiValidationBehavior.Error="Email format is invalid" Flags="ValidateOnAttaching,ValidateOnValueChanged" />
+                        </toolkit:MultiValidationBehavior>
+                    </Entry.Behaviors>
+                </Entry>
             </HorizontalStackLayout>
         </Frame>
 
