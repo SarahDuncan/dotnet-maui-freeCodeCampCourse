@@ -28,4 +28,4 @@ I wrote this code by following along with the [freeCodeCamp.org .NET Maui tutori
 |**The edit a contact view: (add the contact view reuses the same layout)**|<img src="Resources/Images/ContactEdit.png" width="200" alt="Edit contact view"/>|
 |**An example of validation on the edit/add contact views:**|<img src="Resources/Images/Validation.png" width="200" alt="Validation for edit/add contact view"/>|
 
-<span style="text-align:right;color:gray;">last updated 23/05/2024</span>
+last updated 23/05/2024
