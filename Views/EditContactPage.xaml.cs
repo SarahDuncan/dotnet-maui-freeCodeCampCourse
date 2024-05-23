@@ -25,37 +25,27 @@ public partial class EditContactPage : ContentPage
 
 			if (contact != null)
 			{
-				entryName.Text = contact.Name;
-				entryEmail.Text = contact.Email;
-				entryPhoneNumber.Text = contact.PhoneNumber;
-				entryAddress.Text = contact.Address;
+				contactCtrl.Name = contact.Name;
+				contactCtrl.Email = contact.Email;
+				contactCtrl.PhoneNumber = contact.PhoneNumber;
+				contactCtrl.Address = contact.Address;
 			}
 		}
 	}
 
     private void btnUpdate_Clicked(object sender, EventArgs e)
     {
-		if (nameValidator.IsNotValid)
-		{
-			DisplayAlert("There is an error", "Name is required", "OK");
-			return;
-		}
-
-		if (emailValidator.IsNotValid)
-		{
-			foreach (var error in emailValidator.Errors)
-			{
-				DisplayAlert("There is an error", error.ToString(), "OK");
-			}
-			return;
-		}
-
-		contact.Name = entryName.Text;
-		contact.Email = entryEmail.Text;
-		contact.PhoneNumber = entryPhoneNumber.Text;
-		contact.Address = entryAddress.Text;
+		contact.Name = contactCtrl.Name;
+		contact.Email = contactCtrl.Email;
+		contact.PhoneNumber = contactCtrl.PhoneNumber;
+		contact.Address = contactCtrl.Address;
 
         ContactRepository.UpdateContact(contact.Id, contact);
 		Shell.Current.GoToAsync("..");
+    }
+
+    private void contactCtrl_OnError(object sender, string e)
+    {
+		DisplayAlert("Error", e, "OK");
     }
 }
