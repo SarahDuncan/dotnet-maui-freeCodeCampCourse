@@ -20,19 +20,12 @@ I wrote this code by following along with the [freeCodeCamp.org .NET Maui tutori
 
 ## Screenshots
 
-<b>The contacts list view:</b>
-<img src="Resources/Images/ContactsHomePage.png" width="200" alt="Contacts list view"/>
+| View | Screenshot |
+--- | --- |
+|**The contacts list view:**|<img src="Resources/Images/ContactsHomePage.png" width="200" alt="Contacts list view"/>|
+|**The search for a contact view:**|<img src="Resources/Images/ContactsSearch.png" width="200" alt="Search for contact view"/>|
+|**The right click menu:**|<img src="Resources/Images/ContactContextMenu.png" width="200" alt="Contacts context menu/right click view"/>|
+|**The edit a contact view: (add the contact view reuses the same layout)**|<img src="Resources/Images/ContactEdit.png" width="200" alt="Edit contact view"/>|
+|**An example of validation on the edit/add contact views:**|<img src="Resources/Images/Validation.png" width="200" alt="Validation for edit/add contact view"/>|
 
-<b>The search for a contact view:</b>
-<img src="Resources/Images/ContactsSearch.png" width="200" alt="Search for contact view"/>
-
-<b>The right click menu:</b>
-<img src="Resources/Images/ContactContextMenu.png" width="200" alt="Contacts context menu/right click view"/>
-
-<b>The edit a contact view: (add the contact view reuses the same layout)</b>
-<img src="Resources/Images/ContactEdit.png" width="200" alt="Edit contact view"/>
-
-<b>An example of validation on the edit/add contact views:</b>
-<img src="Resources/Images/Validation.png" width="200" alt="Validation for edit/add contact view"/>
-
-<p style="text-align: right;">last updated 23/05/2024</p>
+<span style="text-align:right;color:gray;">last updated 23/05/2024</span>
