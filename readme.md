@@ -18,10 +18,19 @@ I wrote this code by following along with the [freeCodeCamp.org .NET Maui tutori
 - add ContextActions menu items
 - adding a searchbar
 
-![App home page](Resources\Images\ContactsHomePage.png)
-![Search contacts page](Resources\Images\ContactsSearch.png)
-![Context menu page](Resources\Images\ContactContextMenu.png)
-![Edit contact page](Resources\Images\ContactEdit.png)
-![Validate edit/add contact page](Resources\Images\Validation.png)
+The contacts list view:
+<img src="Resources/Images/ContactsHomePage.png" width="200" alt="Contacts list view"/>
+
+The search for a contact view:
+<img src="Resources/Images/ContactsSearch.png" width="200" alt="Search for contact view"/>
+
+The right click menu:
+<img src="Resources/Images/ContactContextMenu.png" width="200" alt="Contacts context menu/right click view"/>
+
+The edit a contact view: (add the contact view reuses the same layout)
+<img src="Resources/Images/ContactEdit.png" width="200" alt="Edit contact view"/>
+
+An example of validation on the edit/add contact views:
+<img src="Resources/Images/Validation.png" width="200" alt="Validation for edit/add contact view"/>
 
 last updated 23/05/2024
