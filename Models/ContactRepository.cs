@@ -68,5 +68,13 @@
                 contactToUpdate.Address = contact.Address;
             }
         }
+
+        public static void AddContact(Contact contact)
+        {
+            var maxId = _contacts.Max(x => x.Id);
+
+            contact.Id = maxId + 1;
+            _contacts.Add(contact);
+        }
     }
 }
