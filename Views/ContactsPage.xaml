@@ -23,7 +23,15 @@
             SeparatorColor="Silver">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Detail="{Binding Email}" Text="{Binding Name}" />
+                    <TextCell Detail="{Binding Email}" Text="{Binding Name}">
+                        <TextCell.ContextActions>
+                            <MenuItem
+                                Clicked="DeleteItem_Clicked"
+                                CommandParameter="{Binding .}"
+                                IsDestructive="True"
+                                Text="Delete" />
+                        </TextCell.ContextActions>
+                    </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

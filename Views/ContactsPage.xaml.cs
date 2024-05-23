@@ -36,4 +36,21 @@ public partial class ContactsPage : ContentPage
     {
         Shell.Current.GoToAsync(nameof(AddContactPage));
     }
+
+    private void DeleteItem_Clicked(object sender, EventArgs e)
+    {
+        var menuItem = sender as MenuItem;
+        var contact = menuItem.CommandParameter as Models.Contact;
+
+        ContactRepository.RemoveContact(contact.Id);
+        DisplayAlert("Delete Contact", "Contact successfully deleted", "OK");
+        LoadContacts();
+        Shell.Current.GoToAsync("..");
+    }
+
+    private void LoadContacts()
+    {
+        var contacts = new ObservableCollection<Models.Contact>(ContactRepository.GetContacts());
+        listContacts.ItemsSource = contacts;
+    }
 }
