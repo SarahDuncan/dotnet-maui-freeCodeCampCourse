@@ -15,6 +15,7 @@ I wrote this code by following along with the [freeCodeCamp.org .NET Maui tutori
 - using ObservableCollections to notify listviews of data changes
 - add validation on input fields
 - add a reusable content control
+- add ContextActions menu items
 - (will add to this list as I cover more of the course)
 
 last updated 22/05/2024
